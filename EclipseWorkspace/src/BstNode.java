@@ -9,4 +9,5 @@ public class BstNode {
 	public int intData;
 	public BstNode leftNode;
 	public BstNode rightNode;
+	//code please work
 }
