@@ -45,22 +45,22 @@ public class BST {
 					finished=true;
 					returner=false;
 				}else {
-				if (num > curIntData) {
-					if (curRightNode.intData == num) {
-						returner=true;
-						finished = true;
-						break;
+					if (num > curIntData) {
+						if (curRightNode.intData == num) {
+							returner=true;
+							finished = true;
+							break;
+						} else {
+							currentNode = currentNode.rightNode;
+						}
 					} else {
-						currentNode = currentNode.rightNode;
+						if (curLeftNode.intData == num) { // create a new node referenced with currentNode.leftNode
+							returner=true;
+							finished = true;
+						} else {
+							currentNode = currentNode.leftNode;
+						}
 					}
-				} else {
-					if (curLeftNode.intData == num) { // create a new node referenced with currentNode.leftNode
-						returner=true;
-						finished = true;
-					} else {
-						currentNode = currentNode.leftNode;
-					}
-				}
 				}
 			} while (!finished);
 		}
